@@ -1,0 +1,11 @@
+/* INVENTARIO: alertas de reposición y lectura del catálogo */
+.modulo-inventario .tabla-modulo td:first-child { min-width: 190px; }
+.modulo-inventario .tabla-modulo td:first-child strong,
+.modulo-inventario .tabla-modulo td:first-child small { display: block; }
+.modulo-inventario .tabla-modulo td:first-child strong { color: #414d43; font-size: 10px; font-weight: 600; }
+.modulo-inventario .tabla-modulo td:first-child small { margin-top: 4px; color: #92998f; font-size: 8px; }
+.modulo-inventario .stock-critico { color: #b77558; font-weight: 700; }
+.modulo-inventario .indicador-modulo:nth-child(2) strong { color: #b77558; }
+@media (max-width: 700px) {
+  .modulo-inventario .tabla-modulo td:first-child { min-width: 160px; }
+}

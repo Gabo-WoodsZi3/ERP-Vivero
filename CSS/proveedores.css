@@ -1,0 +1,7 @@
+/* PROVEEDORES: directorio fiscal y compras recurrentes */
+.modulo-proveedores .tabla-modulo td:first-child { min-width: 175px; color: #414d43; font-weight: 600; }
+.modulo-proveedores .tabla-modulo td:nth-child(4) { color: #71816c; }
+.modulo-proveedores .indicador-modulo:last-child strong { color: #55734d; }
+@media (max-width: 700px) {
+  .modulo-proveedores .tabla-modulo td:first-child { min-width: 155px; }
+}

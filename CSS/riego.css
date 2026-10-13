@@ -1,0 +1,24 @@
+/* RIEGO: humedad de suelo y comandos por sector */
+.modulo-riego .indicador-modulo:nth-child(2) strong { color: #55734d; }
+.humedad { display: inline-block; width: 58px; height: 8px; overflow: hidden; border-radius: 5px; background: #e8eee5; vertical-align: middle; }
+.humedad i { display: block; width: var(--humedad); height: 100%; border-radius: inherit; background: #719168; }
+.humedad-baja i { background: #bd805d; }
+.humedad-alta i { background: #698c9a; }
+.control-riego { min-height: 34px; border: 1px solid #dfe7dc; border-radius: 4px; background: #f7faf5; padding: 0 9px; color: #55734d; font-weight: 600; cursor: pointer; }
+.control-riego:hover { background: #edf3e9; }
+.control-riego.is-active { border-color: #d9e7d5; background: #eaf2e9; color: #55734d; }
+.agenda-riego { display: grid; }
+.agenda-riego article { display: flex; min-height: 57px; align-items: center; gap: 13px; border-top: 1px solid #eef0eb; }
+.agenda-riego time { width: 54px; flex: 0 0 auto; color: #6f796f; font-weight: 700; }
+.agenda-riego article > div { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 5px; }
+.agenda-riego article strong { color: #414d43; }
+.agenda-riego article small { color: #828c82; }
+.punto-riego { width: 9px; height: 9px; flex: 0 0 auto; border-radius: 50%; background: #d6ddd3; }
+.punto-riego.activo { background: #719168; box-shadow: 0 0 0 4px #edf3e9; }
+:root[data-tema="oscuro"] .humedad { background: #39443b; }
+:root[data-tema="oscuro"] .control-riego,
+:root[data-tema="oscuro"] .control-riego.is-active { border-color: #3d5140; background: #293a2c; color: #c5ddb8; }
+@media (max-width: 700px) {
+  .humedad { width: 46px; }
+  .agenda-riego article { gap: 8px; }
+}

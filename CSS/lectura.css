@@ -1,0 +1,30 @@
+/* LECTURA: tamaño mínimo de 12 px con jerarquía para títulos y cifras */
+.sidebar { overflow-y: auto; scrollbar-width: thin; }
+
+body :where(p, span, a, button, input, select, textarea, small, kbd, time, th, td, label, strong, em, li, output) {
+  font-size: max(12px, min(1em, 16px)) !important;
+}
+
+body h1,
+body .encabezado-modulo h1 { font-size: clamp(28px, 2.35vw, 34px) !important; }
+body h1 em { font-size: inherit !important; }
+body h2 { font-size: 16px !important; }
+body .brand-copy strong { font-size: 23px !important; }
+body .metric-value { font-size: clamp(20px, 1.75vw, 25px) !important; }
+body .chart-summary strong,
+body .indicador-modulo strong { font-size: 22px !important; }
+body .metric-value small { font-size: 14px !important; }
+body .primary-button { text-decoration: none !important; }
+
+:root[data-tema="oscuro"] .sidebar { scrollbar-color: #536255 #1a211c; }
+
+@media (max-width: 700px) {
+  body .welcome-row,
+  body .encabezado-modulo { flex-wrap: wrap; }
+  body .encabezado-modulo > div { min-width: 0; }
+  body .encabezado-modulo .primary-button { margin-top: 0; }
+  body h1,
+  body .encabezado-modulo h1 { font-size: 28px !important; }
+  body .metric-value { font-size: 20px !important; }
+  body .indicador-modulo strong { font-size: 18px !important; }
+}

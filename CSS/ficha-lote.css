@@ -1,0 +1,43 @@
+/* FICHA DE LOTE: trazabilidad, crecimiento e historial */
+.detalle-lote { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); gap: 14px; align-items: stretch; }
+.panel-datos-lote, .panel-etapas { padding-bottom: 16px; }
+.codigo-lote-mini { border-radius: 4px; background: #edf2e9; padding: 6px 8px; color: #55734d; font-weight: 700; }
+.rejilla-datos-lote { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px 18px; margin: 2px 0 0; }
+.rejilla-datos-lote div { min-width: 0; }
+.rejilla-datos-lote dt { margin-bottom: 5px; color: #828c82; }
+.rejilla-datos-lote dd { margin: 0; color: #414d43; font-weight: 600; }
+.avance-lote { color: #55734d; font-weight: 700; }
+.progreso-ficha { width: 100%; height: 8px; margin: 7px 0 13px; }
+.linea-tiempo { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.linea-tiempo li { position: relative; display: flex; min-height: 50px; align-items: center; gap: 10px; }
+.linea-tiempo li:not(:last-child)::after { position: absolute; top: 33px; bottom: -2px; left: 13px; width: 1px; background: #e4e9e1; content: ''; }
+.linea-tiempo li > span { z-index: 1; display: grid; width: 27px; height: 27px; flex: 0 0 auto; place-items: center; border: 1px solid #dfe5dc; border-radius: 50%; background: #fff; color: #818b81; font-weight: 700; }
+.linea-tiempo li > div { display: flex; min-width: 0; flex-direction: column; gap: 4px; }
+.linea-tiempo li strong { color: #414d43; }
+.linea-tiempo li small { color: #828c82; }
+.linea-tiempo li.etapa-completa > span { border-color: #719168; background: #719168; color: #fff; }
+.linea-tiempo li.etapa-actual > span { border: 2px solid #719168; color: #55734d; }
+.historial-lote { padding-bottom: 5px; }
+.actividad-lote { display: flex; min-height: 54px; align-items: center; gap: 12px; border-top: 1px solid #eef0eb; }
+.actividad-lote time { width: 115px; flex: 0 0 auto; color: #828c82; }
+.punto-actividad { width: 8px; height: 8px; flex: 0 0 auto; border-radius: 50%; background: #78936d; }
+.actividad-lote > div { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 4px; }
+.actividad-lote strong { color: #414d43; }
+.actividad-lote small { color: #828c82; }
+.formulario-novedad { max-width: 850px; padding-bottom: 4px; }
+.campo-completo { grid-column: 1 / -1; }
+@media (max-width: 960px) {
+  .detalle-lote { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+  .rejilla-datos-lote { gap: 12px; }
+  .actividad-lote { flex-wrap: wrap; gap: 8px; padding: 9px 0; }
+  .actividad-lote time { width: 100px; }
+  .actividad-lote > div { flex-basis: calc(100% - 130px); }
+  .actividad-lote .etiqueta-estado { margin-left: 120px; }
+}
+:root[data-tema="oscuro"] .codigo-lote-mini { background: #293a2c; color: #c5ddb8; }
+:root[data-tema="oscuro"] .linea-tiempo li > span { border-color: #465149; background: #202821; color: #a3aea4; }
+:root[data-tema="oscuro"] .linea-tiempo li.etapa-completa > span { border-color: #719168; background: #719168; color: #fff; }
+:root[data-tema="oscuro"] .linea-tiempo li:not(:last-child)::after,
+:root[data-tema="oscuro"] .actividad-lote { border-color: #354139; }

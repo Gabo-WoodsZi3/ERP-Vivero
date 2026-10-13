@@ -1,0 +1,5 @@
+/* REPORTES: biblioteca de consultas y exportaciones */
+.modulo-reportes .indicador-modulo:nth-child(2) strong { color: #55734d; font-size: 18px; }
+.modulo-reportes .tabla-modulo td:first-child { min-width: 180px; color: #414d43; font-weight: 600; }
+.modulo-reportes .boton-tabla { border: 1px solid #e3e9df; border-radius: 4px; padding: 6px 9px; }
+.modulo-reportes .boton-tabla:hover { background: #edf3e9; }

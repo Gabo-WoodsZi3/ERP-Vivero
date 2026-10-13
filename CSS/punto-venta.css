@@ -1,0 +1,29 @@
+/* PUNTO DE VENTA: captura de productos y resumen tributario */
+.folio-venta { border: 1px solid #e5e9e2; border-radius: 5px; background: #fff; padding: 8px 10px; color: #727d73; font-weight: 600; }
+.zona-venta { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(270px, .85fr); align-items: start; gap: 14px; }
+.panel-carrito { padding-bottom: 14px; }
+.campo-cliente { display: grid; gap: 7px; margin: 0 0 15px; color: #657065; font-weight: 600; }
+.campo-cliente select { min-height: 39px; border: 1px solid #e5e9e2; border-radius: 4px; background: #fff; padding: 0 10px; color: #39463c; }
+.tabla-carrito td { height: 54px; }
+.tabla-carrito td:first-child { min-width: 220px; }
+.tabla-carrito select { width: 100%; min-width: 210px; border: 1px solid #e5e9e2; border-radius: 4px; background: #fff; padding: 8px; color: #414d43; }
+.tabla-carrito input[type="number"] { width: 76px; height: 36px; border: 1px solid #e5e9e2; border-radius: 4px; padding: 0 8px; }
+.tabla-carrito .total-linea { color: #465248; font-weight: 700; }
+.resumen-venta { position: sticky; top: 78px; padding-bottom: 14px; }
+.fila-total { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #eef0eb; padding: 12px 0; color: #727d73; }
+.fila-total strong { color: #465248; white-space: nowrap; }
+.total-destacado { margin-top: 4px; border-bottom: 0; color: #344137; font-weight: 700; }
+.total-destacado strong { color: #244b37; font-size: 20px; }
+.nota-impuestos { margin: 8px 0 13px; color: #828c82; line-height: 1.5; }
+.boton-confirmar { width: 100%; justify-content: center; }
+.enlace-factura { display: flex; justify-content: space-between; margin-top: 12px; color: #627f5b; text-decoration: none; }
+@media (max-width: 960px) {
+  .zona-venta { grid-template-columns: minmax(0, 1fr); }
+  .resumen-venta { position: static; }
+}
+@media (max-width: 700px) {
+  .zona-venta { gap: 10px; }
+  .folio-venta { padding: 7px; }
+  .tabla-carrito td:first-child { min-width: 185px; }
+  .tabla-carrito select { min-width: 175px; }
+}

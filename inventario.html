@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f1">
+  <title>Inventario | Vivero Nativa</title>
+  <script>try { const tema = new URLSearchParams(location.search).get('tema'); if (tema === 'oscuro' || (!tema && localStorage.getItem('tema-vivero') === 'oscuro')) document.documentElement.dataset.tema = 'oscuro'; } catch { }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/estilos-index.css">
+  <link rel="stylesheet" href="CSS/inventario.css">
+  <link rel="stylesheet" href="CSS/tema.css">
+  <link rel="stylesheet" href="CSS/lectura.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- NAVEGACIÓN GENERAL DEL ERP -->
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="Vivero Nativa, inicio"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-copy"><strong>nativa</strong><small>GESTIÓN DE VIVERO</small></span></a>
+      <div class="workspace-switcher"><span class="workspace-avatar">NV</span><span class="workspace-copy"><strong>Vivero Nativa</strong><small>Medellín · Colombia</small></span></div>
+      <p class="nav-label">ESPACIO DE TRABAJO</p>
+      <nav class="primary-nav" aria-label="Navegación principal">
+        <a class="nav-link" href="index.html"><span>▦</span>Inicio</a>
+        <a class="nav-link is-active" href="inventario.html" aria-current="page"><span>⬡</span>Inventario<span class="nav-count">8</span></a>
+        <a class="nav-link" href="produccion.html"><span>♧</span>Producción</a>
+        <a class="nav-link" href="ventas.html"><span>▱</span>Ventas</a>
+        <a class="nav-link" href="compras.html"><span>▣</span>Compras</a>
+        <a class="nav-link" href="finanzas.html"><span>▥</span>Finanzas</a>
+        <a class="nav-link" href="clientes.html"><span>♙</span>Clientes</a>
+      </nav>
+      <p class="nav-label nav-label-lower">GESTIÓN</p>
+      <nav class="primary-nav" aria-label="Herramientas de gestión"><a class="nav-link" href="reportes.html"><span>▤</span>Reportes</a><a class="nav-link" href="configuracion.html"><span>⚙</span>Configuración</a></nav>
+      <div class="sidebar-bottom"><div class="season-note"><span class="season-icon">✳</span><div><strong>Operación de temporada</strong><small>Semana 41 · Actividad alta</small></div></div><button class="profile-button" type="button"><span class="profile-avatar">AD</span><span class="profile-copy"><strong>Perfil Admin</strong><small>Administración</small></span></button></div>
+    </aside>
+
+    <main class="main-content">
+      <!-- BÚSQUEDA Y DATOS DE LA SESIÓN -->
+      <header class="topbar"><button class="mobile-menu" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button><div class="breadcrumbs"><a href="index.html">Vivero Nativa</a><span class="breadcrumb-slash">/</span><strong>Inventario</strong></div><div class="topbar-actions"><label class="search-box"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.8"/><path d="m13 13 4 4"/></svg><input id="global-search" type="search" placeholder="Buscar en inventario..." aria-label="Buscar en inventario"><kbd>Ctrl K</kbd></label><button class="icon-button notification-button" type="button" aria-label="Notificaciones, 3 sin leer">♧<span></span></button><span class="topbar-divider"></span><span class="today-label" id="today-label"></span></div></header>
+
+      <!-- INDICADORES DE EXISTENCIAS -->
+      <div class="page-content vista-modulo modulo-inventario">
+        <header class="encabezado-modulo"><div><p class="sobretitulo-modulo">GESTIÓN DE VIVERO / EXISTENCIAS</p><h1>Inventario</h1><p class="descripcion-modulo">Consulta existencias por especie, variedad, lote y ubicación de cultivo.</p></div><button class="primary-button" type="button" data-accion="Agregar producto"><span>+</span> Agregar producto</button></header>
+        <section class="indicadores-modulo" aria-label="Resumen del inventario"><article class="indicador-modulo"><span>UNIDADES DISPONIBLES</span><strong>12.840</strong><small>En 86 variedades</small></article><article class="indicador-modulo"><span>VARIEDADES CON ALERTA</span><strong>7</strong><small>Revisar reposición</small></article><article class="indicador-modulo"><span>EXACTITUD DE STOCK</span><strong>94%</strong><small>Último conteo: hoy</small></article></section>
+
+        <!-- TABLA DE PLANTAS E INSUMOS -->
+        <section class="panel panel-modulo"><div class="encabezado-panel"><div><p class="sobretitulo-modulo">TRAZABILIDAD DE CULTIVO</p><h2>Existencias por especie y lote</h2></div><span class="contador-registros">6 lotes destacados</span></div><div class="envoltura-tabla"><table class="tabla-modulo"><thead><tr><th>ESPECIE</th><th>VARIEDAD</th><th>TAMAÑO</th><th>LOTE</th><th>ETAPA DE CRECIMIENTO</th><th>UNIDADES</th><th>INVERNADERO</th><th>FICHA</th></tr></thead><tbody>
+          <tr><td><strong>Monstera deliciosa</strong></td><td>Thai Constellation</td><td>Maceta 18 cm</td><td>LO-248</td><td><span class="etiqueta-estado estado-atencion">Enraizamiento</span></td><td class="stock-critico">4</td><td>Invernadero 2 · B-04</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-248">Ver ficha</a></td></tr>
+          <tr><td><strong>Calathea orbifolia</strong></td><td>Silver Plate</td><td>Maceta 14 cm</td><td>LO-247</td><td><span class="etiqueta-estado estado-atencion">Crecimiento</span></td><td class="stock-critico">6</td><td>Invernadero 1 · A-12</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-247">Ver ficha</a></td></tr>
+          <tr><td><strong>Ficus lyrata</strong></td><td>Bambino</td><td>Maceta 20 cm</td><td>LO-246</td><td><span class="etiqueta-estado estado-alerta">Aclimatación</span></td><td class="stock-critico">2</td><td>Invernadero 2 · C-02</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-246">Ver ficha</a></td></tr>
+          <tr><td><strong>Lavanda angustifolia</strong></td><td>Hidcote</td><td>Maceta 12 cm</td><td>LO-245</td><td><span class="etiqueta-estado estado-correcto">Lista para venta</span></td><td>184</td><td>Invernadero 4 · D-08</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-245">Ver ficha</a></td></tr>
+          <tr><td><strong>Philodendron hederaceum</strong></td><td>Brasil</td><td>Maceta 15 cm</td><td>LO-244</td><td><span class="etiqueta-estado estado-correcto">Crecimiento</span></td><td>96</td><td>Invernadero 3 · B-11</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-244">Ver ficha</a></td></tr>
+          <tr><td><strong>Monstera deliciosa</strong></td><td>Deliciosa</td><td>Maceta 24 cm</td><td>LO-243</td><td><span class="etiqueta-estado estado-atencion">Trasplante</span></td><td>32</td><td>Invernadero 2 · A-06</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-243">Ver ficha</a></td></tr>
+        </tbody></table></div><p class="sin-resultados" hidden>No hay productos que coincidan con la búsqueda.</p></section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="JS/app.js" defer></script>
+</body>
+</html>

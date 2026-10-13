@@ -1,0 +1,10 @@
+/* PRODUCCIÓN: agenda de cultivo y avance de lotes */
+.modulo-produccion .agenda-semanal { border-top: 2px solid #cbd8c2; }
+.modulo-produccion .agenda-produccion article { min-height: 61px; }
+.modulo-produccion .barra-progreso { width: 72px; }
+.modulo-produccion .tabla-modulo td:first-child strong { color: #4f7049; font-weight: 700; }
+.modulo-produccion .indicador-modulo:first-child strong { color: #527249; }
+@media (max-width: 700px) {
+  .modulo-produccion .agenda-produccion article { min-height: 64px; }
+  .modulo-produccion .barra-progreso { width: 55px; }
+}

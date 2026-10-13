@@ -1,0 +1,20 @@
+/* PERSONAL: turnos, responsables y tareas verificables */
+.panel-tareas { padding-bottom: 6px; }
+.lista-tareas { display: grid; }
+.fila-tarea { position: relative; display: flex; min-height: 61px; align-items: center; gap: 12px; border-top: 1px solid #eef0eb; cursor: pointer; }
+.fila-tarea > input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.casilla-tarea { display: grid; width: 17px; height: 17px; flex: 0 0 auto; place-items: center; border: 1px solid #d8ddd5; border-radius: 4px; }
+.fila-tarea input:checked + .casilla-tarea { border-color: #66845e; background: #66845e; }
+.fila-tarea input:checked + .casilla-tarea::after { width: 7px; height: 4px; transform: translateY(-1px) rotate(-45deg); border-bottom: 1.5px solid white; border-left: 1.5px solid white; content: ''; }
+.fila-tarea input:focus-visible + .casilla-tarea { outline: 2px solid #739579; outline-offset: 2px; }
+.hora-tarea { width: 55px; flex: 0 0 auto; color: #6f796f; font-weight: 700; }
+.detalle-tarea { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 5px; }
+.detalle-tarea strong { color: #414d43; }
+.detalle-tarea small { color: #828c82; }
+.fila-tarea.is-complete .detalle-tarea strong { color: #92998f; text-decoration: line-through; }
+.modulo-personal .tabla-modulo td:first-child { color: #414d43; font-weight: 600; }
+@media (max-width: 700px) {
+  .fila-tarea { flex-wrap: wrap; gap: 8px; padding: 10px 0; }
+  .detalle-tarea { flex-basis: calc(100% - 105px); }
+  .fila-tarea .etiqueta-estado { margin-left: 37px; }
+}

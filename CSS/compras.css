@@ -1,0 +1,12 @@
+/* COMPRAS: proveedores y recepción de mercadería */
+.modulo-compras .indicador-modulo:nth-child(3) strong { color: #a57947; }
+.proveedores-compras { padding-bottom: 5px; }
+.lista-proveedores { display: grid; }
+.lista-proveedores article { display: flex; min-height: 58px; align-items: center; gap: 10px; border-top: 1px solid #f0f1ed; }
+.lista-proveedores article > div { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 4px; }
+.lista-proveedores article strong { color: #414d43; font-size: 10px; font-weight: 600; }
+.lista-proveedores article small { color: #92998f; font-size: 9px; }
+.proveedor-avatar { display: grid; width: 30px; height: 30px; flex: 0 0 auto; place-items: center; border-radius: 6px; background: #edf1e8; color: #5d7953; font-size: 9px; font-weight: 700; }
+@media (max-width: 700px) {
+  .lista-proveedores article small { max-width: 205px; }
+}

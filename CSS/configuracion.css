@@ -1,0 +1,10 @@
+/* CONFIGURACIÓN: datos del vivero y preferencias */
+.modulo-configuracion .encabezado-modulo { margin-bottom: 2px; }
+.modulo-configuracion .panel-configuracion { max-width: 850px; padding-bottom: 4px; }
+.modulo-configuracion .sucursal-configuracion { max-width: 850px; padding-bottom: 14px; }
+.sucursal-configuracion p { margin: 0 0 6px; color: #465248; font-size: 10px; }
+.sucursal-configuracion > small { color: #92998f; font-size: 9px; }
+@media (max-width: 700px) {
+  .modulo-configuracion .panel-configuracion,
+  .modulo-configuracion .sucursal-configuracion { max-width: none; }
+}

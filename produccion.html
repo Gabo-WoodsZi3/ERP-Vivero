@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f1">
+  <title>Producción | Vivero Nativa</title>
+  <script>try { const tema = new URLSearchParams(location.search).get('tema'); if (tema === 'oscuro' || (!tema && localStorage.getItem('tema-vivero') === 'oscuro')) document.documentElement.dataset.tema = 'oscuro'; } catch { }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/estilos-index.css"><link rel="stylesheet" href="CSS/produccion.css"><link rel="stylesheet" href="CSS/tema.css"><link rel="stylesheet" href="CSS/lectura.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- NAVEGACIÓN GENERAL DEL ERP -->
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="Vivero Nativa, inicio"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-copy"><strong>nativa</strong><small>GESTIÓN DE VIVERO</small></span></a>
+      <div class="workspace-switcher"><span class="workspace-avatar">NV</span><span class="workspace-copy"><strong>Vivero Nativa</strong><small>Medellín · Colombia</small></span></div>
+      <p class="nav-label">ESPACIO DE TRABAJO</p>
+      <nav class="primary-nav" aria-label="Navegación principal"><a class="nav-link" href="index.html"><span>▦</span>Inicio</a><a class="nav-link" href="inventario.html"><span>⬡</span>Inventario<span class="nav-count">8</span></a><a class="nav-link is-active" href="produccion.html" aria-current="page"><span>♧</span>Producción</a><a class="nav-link" href="ventas.html"><span>▱</span>Ventas</a><a class="nav-link" href="compras.html"><span>▣</span>Compras</a><a class="nav-link" href="finanzas.html"><span>▥</span>Finanzas</a><a class="nav-link" href="clientes.html"><span>♙</span>Clientes</a></nav>
+      <p class="nav-label nav-label-lower">GESTIÓN</p><nav class="primary-nav" aria-label="Herramientas de gestión"><a class="nav-link" href="reportes.html"><span>▤</span>Reportes</a><a class="nav-link" href="configuracion.html"><span>⚙</span>Configuración</a></nav>
+      <div class="sidebar-bottom"><div class="season-note"><span class="season-icon">✳</span><div><strong>Operación de temporada</strong><small>Semana 41 · Actividad alta</small></div></div><button class="profile-button" type="button"><span class="profile-avatar">AD</span><span class="profile-copy"><strong>Perfil Admin</strong><small>Administración</small></span></button></div>
+    </aside>
+    <main class="main-content">
+      <!-- BÚSQUEDA Y DATOS DE LA SESIÓN -->
+      <header class="topbar"><button class="mobile-menu" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button><div class="breadcrumbs"><a href="index.html">Vivero Nativa</a><span class="breadcrumb-slash">/</span><strong>Producción</strong></div><div class="topbar-actions"><label class="search-box"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.8"/><path d="m13 13 4 4"/></svg><input id="global-search" type="search" placeholder="Buscar lotes..." aria-label="Buscar lotes"><kbd>Ctrl K</kbd></label><button class="icon-button notification-button" type="button" aria-label="Notificaciones, 3 sin leer">♧<span></span></button><span class="topbar-divider"></span><span class="today-label" id="today-label"></span></div></header>
+      <div class="page-content vista-modulo modulo-produccion">
+        <!-- RESUMEN DE CULTIVOS EN CURSO -->
+        <header class="encabezado-modulo"><div><p class="sobretitulo-modulo">GESTIÓN DE VIVERO / CULTIVO</p><h1>Producción</h1><p class="descripcion-modulo">Consulta lotes, etapas de crecimiento, tareas y próximos trasplantes.</p></div><button class="primary-button" type="button" data-accion="Crear lote"><span>+</span> Crear lote</button></header>
+        <section class="indicadores-modulo" aria-label="Resumen de producción"><article class="indicador-modulo"><span>LOTES EN CURSO</span><strong>18</strong><small>5 listos para despacho</small></article><article class="indicador-modulo"><span>PLÁNTULAS ACTIVAS</span><strong>1.260</strong><small>En 4 invernaderos</small></article><article class="indicador-modulo"><span>TAREAS PARA HOY</span><strong>6</strong><small>2 requieren atención</small></article></section>
+        <!-- PLANIFICACIÓN DE LA SEMANA -->
+        <section class="panel panel-modulo agenda-semanal"><div class="encabezado-panel"><div><p class="sobretitulo-modulo">PLANIFICACIÓN</p><h2>Agenda de cultivo</h2></div><span class="contador-registros">Esta semana</span></div><div class="agenda-produccion"><article><time>HOY · 10:30</time><div><strong>Control de riego</strong><small>Sector tropical · Invernadero 2</small></div><span class="etiqueta-estado estado-atencion">En curso</span></article><article><time>HOY · 14:00</time><div><strong>Reunión de producción</strong><small>Sala de reuniones · Equipo completo</small></div><span class="etiqueta-estado estado-correcto">Programada</span></article><article><time>MAÑANA · 08:30</time><div><strong>Trasplante de Monstera</strong><small>Lote LO-248 · Invernadero 2</small></div><span class="etiqueta-estado estado-correcto">Programada</span></article></div></section>
+        <!-- SEGUIMIENTO DE LOTES -->
+        <section class="panel panel-modulo"><div class="encabezado-panel"><div><p class="sobretitulo-modulo">CULTIVO ACTIVO</p><h2>Lotes de producción</h2></div><span class="contador-registros">4 lotes destacados</span></div><div class="envoltura-tabla"><table class="tabla-modulo"><thead><tr><th>LOTE</th><th>ESPECIE Y VARIEDAD</th><th>INICIO</th><th>UNIDADES</th><th>AVANCE</th><th>PRÓXIMA TAREA</th><th>FICHA</th></tr></thead><tbody><tr><td><strong>LO-248</strong></td><td>Monstera deliciosa · Thai Constellation</td><td>02 oct 2026</td><td>120</td><td><span class="barra-progreso"><i style="--avance:78%"></i></span> 78%</td><td>Trasplante · 9 oct</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-248">Ver ficha</a></td></tr><tr><td><strong>LO-247</strong></td><td>Calathea orbifolia · Silver Plate</td><td>04 oct 2026</td><td>320</td><td><span class="barra-progreso"><i style="--avance:62%"></i></span> 62%</td><td>Revisión de follaje · 8 oct</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-247">Ver ficha</a></td></tr><tr><td><strong>LO-246</strong></td><td>Ficus lyrata · Bambino</td><td>16 sep 2026</td><td>80</td><td><span class="barra-progreso"><i style="--avance:91%"></i></span> 91%</td><td>Control de calidad · hoy</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-246">Ver ficha</a></td></tr><tr><td><strong>LO-245</strong></td><td>Lavanda angustifolia · Hidcote</td><td>28 sep 2026</td><td>184</td><td><span class="barra-progreso"><i style="--avance:86%"></i></span> 86%</td><td>Poda · 8 oct</td><td><a class="boton-tabla" href="ficha-lote.html?id=LO-245">Ver ficha</a></td></tr></tbody></table></div><p class="sin-resultados" hidden>No hay lotes que coincidan con la búsqueda.</p></section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><script src="JS/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+/* CLIENTES: directorio y relaciones comerciales */
+.modulo-clientes .tabla-modulo td:first-child { min-width: 155px; color: #414d43; font-weight: 600; }
+.modulo-clientes .indicador-modulo:nth-child(3) strong { color: #55734d; }
+.modulo-clientes .tabla-modulo td:nth-child(3) { color: #71816c; }
+@media (max-width: 700px) {
+  .modulo-clientes .tabla-modulo td:first-child { min-width: 145px; }
+}

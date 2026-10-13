@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f6f1">
+  <title>Punto de venta | Vivero Nativa</title>
+  <script>try { const tema = new URLSearchParams(location.search).get('tema'); if (tema === 'oscuro' || (!tema && localStorage.getItem('tema-vivero') === 'oscuro')) document.documentElement.dataset.tema = 'oscuro'; } catch { }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/estilos-index.css"><link rel="stylesheet" href="CSS/punto-venta.css"><link rel="stylesheet" href="CSS/tema.css"><link rel="stylesheet" href="CSS/lectura.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- NAVEGACIÓN GENERAL, GENERADA POR EL SCRIPT COMPARTIDO -->
+    <aside class="sidebar" id="sidebar"><a class="brand" href="index.html" aria-label="Vivero Nativa, inicio"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-copy"><strong>nativa</strong><small>GESTIÓN DE VIVERO</small></span></a><div class="workspace-switcher"><span class="workspace-avatar">NV</span><span class="workspace-copy"><strong>Vivero Nativa</strong><small>Medellín · Colombia</small></span></div><p class="nav-label">OPERACIÓN</p><nav class="primary-nav" aria-label="Navegación principal"></nav><p class="nav-label nav-label-lower">GESTIÓN</p><nav class="primary-nav" aria-label="Herramientas de gestión"></nav><div class="sidebar-bottom"><div class="season-note"><span class="season-icon">✳</span><div><strong>Operación de temporada</strong><small>Semana 41 · Actividad alta</small></div></div><button class="profile-button" type="button"><span class="profile-avatar">AD</span><span class="profile-copy"><strong>Perfil Admin</strong><small>Administración</small></span></button></div></aside>
+    <main class="main-content">
+      <!-- BÚSQUEDA, TEMA Y FECHA -->
+      <header class="topbar"><button class="mobile-menu" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button><div class="breadcrumbs"><a href="index.html">Vivero Nativa</a><span class="breadcrumb-slash">/</span><strong>Punto de venta</strong></div><div class="topbar-actions"><label class="search-box"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.8"/><path d="m13 13 4 4"/></svg><input id="global-search" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"><kbd>Ctrl K</kbd></label><button class="icon-button notification-button" type="button" aria-label="Notificaciones, 3 sin leer">♧<span></span></button><span class="topbar-divider"></span><span class="today-label" id="today-label"></span></div></header>
+      <div class="page-content vista-modulo modulo-punto-venta">
+        <!-- ENCABEZADO DE LA VENTA ACTUAL -->
+        <header class="encabezado-modulo"><div><p class="sobretitulo-modulo">VENTA PRESENCIAL / COP</p><h1>Punto de venta</h1><p class="descripcion-modulo">Registra una venta, calcula impuestos de referencia y prepara su factura.</p></div><span class="folio-venta">Borrador · PV-00129</span></header>
+        <form id="formulario-venta" class="zona-venta">
+          <!-- DATOS DEL CLIENTE Y PRODUCTOS -->
+          <section class="panel panel-modulo panel-carrito"><div class="encabezado-panel"><div><p class="sobretitulo-modulo">NUEVA VENTA</p><h2>Productos</h2></div><span class="contador-registros">Bodega Medellín</span></div><label class="campo-cliente">Cliente<select name="cliente" required><option value="">Selecciona un cliente</option><option>Jardines del Centro</option><option>Vivero Municipal</option><option>Patio &amp; Alma</option><option>Venta de mostrador</option></select></label><div class="envoltura-tabla"><table class="tabla-modulo tabla-carrito"><thead><tr><th>PRODUCTO</th><th>PRECIO (COP)</th><th>CANTIDAD</th><th>TOTAL (COP)</th></tr></thead><tbody><tr class="linea-venta"><td><select aria-label="Primer producto"><option data-precio="68500">Monstera deliciosa · maceta 18 cm</option><option data-precio="42800">Calathea orbifolia · maceta 14 cm</option><option data-precio="53200">Ficus lyrata · maceta 20 cm</option></select></td><td class="precio-unitario">$ 68.500</td><td><input type="number" min="0" max="4" value="1" aria-label="Cantidad de Monstera" required></td><td class="total-linea">$ 68.500</td></tr><tr class="linea-venta"><td><select aria-label="Segundo producto"><option data-precio="42800">Calathea orbifolia · maceta 14 cm</option><option data-precio="68500">Monstera deliciosa · maceta 18 cm</option><option data-precio="53200">Ficus lyrata · maceta 20 cm</option></select></td><td class="precio-unitario">$ 42.800</td><td><input type="number" min="0" max="6" value="2" aria-label="Cantidad de Calathea" required></td><td class="total-linea">$ 85.600</td></tr></tbody></table></div><button class="boton-tabla" type="button" data-accion="Agregar producto">+ Agregar producto</button></section>
+
+          <!-- MEDIO DE PAGO Y RESUMEN -->
+          <aside class="panel panel-modulo resumen-venta"><div class="encabezado-panel"><div><p class="sobretitulo-modulo">RESUMEN</p><h2>Total de la venta</h2></div></div><label class="campo-cliente">Medio de pago<select name="medio-pago"><option>Transferencia</option><option>Tarjeta débito</option><option>Tarjeta crédito</option><option>Efectivo</option></select></label><div class="fila-total"><span>Subtotal</span><strong id="subtotal-venta">$ 154.100</strong></div><div class="fila-total"><span>IVA de referencia (19%)</span><strong id="iva-venta">$ 29.279</strong></div><div class="fila-total total-destacado"><span>Total COP</span><strong id="total-venta">$ 183.379</strong></div><p class="nota-impuestos">Impuestos ilustrativos. Configura el tratamiento tributario de cada producto antes de operar.</p><button class="primary-button boton-confirmar" type="submit">Registrar venta</button><a class="enlace-factura" href="facturacion.html">Continuar a facturación electrónica <span>→</span></a></aside>
+        </form>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><script src="JS/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* FACTURACIÓN: estados de transmisión y referencias DIAN */
+.modulo-facturacion .tabla-modulo td:first-child { min-width: 155px; }
+.modulo-facturacion .tabla-modulo td:first-child strong,
+.modulo-facturacion .tabla-modulo td:first-child small { display: block; }
+.modulo-facturacion .tabla-modulo td:first-child small { margin-top: 4px; color: #92998f; }
+.nota-dian { display: flex; align-items: center; gap: 14px; padding: 15px; }
+.sello-dian { display: grid; width: 46px; height: 46px; flex: 0 0 auto; place-items: center; border-radius: 7px; background: #edf1e8; color: #55734d; font-size: 13px; font-weight: 700; }
+.nota-dian > div { min-width: 0; flex: 1; }
+.nota-dian strong { color: #414d43; }
+.nota-dian p { margin: 5px 0 0; color: #727d73; line-height: 1.5; }
+@media (max-width: 700px) {
+  .nota-dian { align-items: flex-start; flex-wrap: wrap; }
+  .nota-dian > span:last-child { margin-left: 60px; }
+}

@@ -1,0 +1,14 @@
+/* FINANZAS: saldos y vencimientos */
+.modulo-finanzas .indicador-modulo:last-child strong { color: #55734d; }
+.importe-positivo { color: #5e855e !important; font-weight: 700; }
+.importe-negativo { color: #ad7658 !important; font-weight: 600; }
+.vencimiento-financiero { display: flex; min-height: 57px; align-items: center; gap: 12px; border-top: 1px solid #f0f1ed; }
+.vencimiento-financiero > span:nth-child(2) { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 4px; }
+.vencimiento-financiero > span strong,
+.vencimiento-financiero > strong { color: #465248; font-size: 10px; font-weight: 600; }
+.vencimiento-financiero small { color: #92998f; font-size: 9px; }
+.vencimiento-fecha { border-radius: 4px; background: #f7f0e7; padding: 6px; color: #a57947; font-size: 8px; font-weight: 700; }
+@media (max-width: 700px) {
+  .vencimiento-financiero { gap: 8px; }
+  .vencimiento-financiero > strong { font-size: 9px; }
+}

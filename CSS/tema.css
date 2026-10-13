@@ -1,0 +1,149 @@
+/* TEMA OSCURO: contraste de lectura y superficies del vivero */
+:root[data-tema="oscuro"] {
+  color-scheme: dark;
+  --ink: #e5ebe4;
+  --muted: #a3aea4;
+  --line: #354139;
+  --paper: #202821;
+  --canvas: #151b17;
+  --forest: #a3c39a;
+  --forest-soft: #2a392d;
+  --clay: #d7a181;
+}
+
+/* TRANSICIÓN DE TEMA: solo color y superficies para no alterar movimientos */
+body,
+body * {
+  transition-property: background-color, color, border-color, box-shadow;
+  transition-duration: 220ms;
+  transition-timing-function: ease;
+}
+.sidebar { transition: background-color .22s ease, border-color .22s ease, transform .22s ease; }
+.primary-button { transition: background-color .22s ease, color .22s ease, border-color .22s ease, transform .15s ease; }
+.toast { transition: opacity .2s ease, transform .2s ease, background-color .22s ease, color .22s ease, border-color .22s ease; }
+
+:root[data-tema="oscuro"] body { background: #151b17; color: #e5ebe4; }
+:root[data-tema="oscuro"] .sidebar { border-color: #303a32; background: #1a211c; }
+:root[data-tema="oscuro"] .topbar { border-color: #303a32; background: rgb(26 33 28 / 94%); }
+:root[data-tema="oscuro"] .workspace-switcher,
+:root[data-tema="oscuro"] .panel,
+:root[data-tema="oscuro"] .metric-card,
+:root[data-tema="oscuro"] .indicador-modulo,
+:root[data-tema="oscuro"] .select-button,
+:root[data-tema="oscuro"] .search-box,
+:root[data-tema="oscuro"] .search-box kbd,
+:root[data-tema="oscuro"] .formulario-configuracion input,
+:root[data-tema="oscuro"] .formulario-configuracion select,
+:root[data-tema="oscuro"] .toast { border-color: #354139; background-color: #202821; color: #e5ebe4; }
+:root[data-tema="oscuro"] .nav-link { color: #b4beb5; }
+:root[data-tema="oscuro"] .nav-link:hover,
+:root[data-tema="oscuro"] .icon-button:hover { background-color: #29342c; color: #f1f4ef; }
+:root[data-tema="oscuro"] .nav-link.is-active { background-color: #2b3b2e; color: #c7dfbd; }
+:root[data-tema="oscuro"] .nav-link.is-active::before { background: #a0bd91; }
+:root[data-tema="oscuro"] .workspace-avatar,
+:root[data-tema="oscuro"] .profile-avatar { background: #304234; color: #c7dfbd; }
+:root[data-tema="oscuro"] .season-note { border-color: #3a4031; background: linear-gradient(110deg, #292d23, #2a2d26); }
+:root[data-tema="oscuro"] .season-icon { background: #414632; color: #d3d6a5; }
+:root[data-tema="oscuro"] .nav-count,
+:root[data-tema="oscuro"] .task-count { background: #303931; color: #c1c9bf; }
+:root[data-tema="oscuro"] .search-box input,
+:root[data-tema="oscuro"] .formulario-configuracion input,
+:root[data-tema="oscuro"] .formulario-configuracion select { color: #e5ebe4; }
+:root[data-tema="oscuro"] .search-box input::placeholder { color: #a3aea4; }
+:root[data-tema="oscuro"] .formulario-configuracion input,
+:root[data-tema="oscuro"] .formulario-configuracion select { border-color: #465149; }
+:root[data-tema="oscuro"] .campo-cliente select,
+:root[data-tema="oscuro"] .tabla-carrito select,
+:root[data-tema="oscuro"] .tabla-carrito input { border-color: #465149; background: #202821; color: #e5ebe4; }
+:root[data-tema="oscuro"] h1,
+:root[data-tema="oscuro"] h2,
+:root[data-tema="oscuro"] strong,
+:root[data-tema="oscuro"] .metric-value,
+:root[data-tema="oscuro"] .chart-summary strong,
+:root[data-tema="oscuro"] .panel-heading h2,
+:root[data-tema="oscuro"] .encabezado-panel h2,
+:root[data-tema="oscuro"] .breadcrumbs strong,
+:root[data-tema="oscuro"] .tabla-modulo td:first-child strong,
+:root[data-tema="oscuro"] .agenda-produccion article strong,
+:root[data-tema="oscuro"] .stock-copy strong,
+:root[data-tema="oscuro"] .client-cell strong { color: #e5ebe4; }
+:root[data-tema="oscuro"] .breadcrumbs,
+:root[data-tema="oscuro"] .descripcion-modulo,
+:root[data-tema="oscuro"] .welcome-subtitle,
+:root[data-tema="oscuro"] .metric-foot,
+:root[data-tema="oscuro"] .tabla-modulo td,
+:root[data-tema="oscuro"] .today-label { color: #a3aea4; }
+:root[data-tema="oscuro"] .nav-label,
+:root[data-tema="oscuro"] .panel-kicker,
+:root[data-tema="oscuro"] .sobretitulo-modulo,
+:root[data-tema="oscuro"] .contador-registros,
+:root[data-tema="oscuro"] .task-content small,
+:root[data-tema="oscuro"] .stock-copy small,
+:root[data-tema="oscuro"] .chart-y-labels,
+:root[data-tema="oscuro"] .chart-legend,
+:root[data-tema="oscuro"] .tasks-footer,
+:root[data-tema="oscuro"] .page-footer { color: #a3aea4; }
+:root[data-tema="oscuro"] .trend-up,
+:root[data-tema="oscuro"] .importe-positivo { color: #b7d3aa !important; }
+:root[data-tema="oscuro"] .trend-warn { color: #e0a58b; }
+:root[data-tema="oscuro"] .text-button,
+:root[data-tema="oscuro"] .stock-link,
+:root[data-tema="oscuro"] .boton-tabla { color: #b7d3aa; }
+:root[data-tema="oscuro"] .text-button:hover,
+:root[data-tema="oscuro"] .stock-link:hover,
+:root[data-tema="oscuro"] .boton-tabla:hover { color: #d5e8cc; }
+:root[data-tema="oscuro"] .tabla-modulo thead,
+:root[data-tema="oscuro"] thead { background: #252e27; }
+:root[data-tema="oscuro"] .tabla-modulo td,
+:root[data-tema="oscuro"] .agenda-produccion article,
+:root[data-tema="oscuro"] .stock-item,
+:root[data-tema="oscuro"] .task-item,
+:root[data-tema="oscuro"] .vencimiento-financiero,
+:root[data-tema="oscuro"] .lista-proveedores article,
+:root[data-tema="oscuro"] .fila-preferencia { border-color: #303a32; }
+:root[data-tema="oscuro"] .fila-tarea { border-color: #303a32; }
+:root[data-tema="oscuro"] .etiqueta-estado.estado-correcto,
+:root[data-tema="oscuro"] .order-status.status-paid { background: #293a2c; color: #b7d3aa; }
+:root[data-tema="oscuro"] .etiqueta-estado.estado-atencion,
+:root[data-tema="oscuro"] .order-status.status-preparing { background: #3a3024; color: #e1bd8c; }
+:root[data-tema="oscuro"] .etiqueta-estado.estado-alerta,
+:root[data-tema="oscuro"] .order-status.status-pending { background: #3b2d28; color: #e0a58b; }
+:root[data-tema="oscuro"] .tag-sales { background: #3b3028; color: #e0b497; }
+:root[data-tema="oscuro"] .tag-care { background: #2b392c; color: #bdd4ae; }
+:root[data-tema="oscuro"] .tag-stock { background: #2b383a; color: #b6d0d2; }
+:root[data-tema="oscuro"] .tag-team { background: #393628; color: #ddd09c; }
+:root[data-tema="oscuro"] .chart-gridlines i { border-color: #39433b; }
+:root[data-tema="oscuro"] .chart-bar-group i { background: #39483a; }
+:root[data-tema="oscuro"] .chart-bar-group.is-current i { background: #87a779; }
+:root[data-tema="oscuro"] .legend-current { background: #87a779; }
+:root[data-tema="oscuro"] .legend-previous { background: #39483a; }
+:root[data-tema="oscuro"] .barra-progreso { background: #39443b; }
+:root[data-tema="oscuro"] .barra-progreso i { background: #91ae83; }
+:root[data-tema="oscuro"] .primary-button { border-color: #73936a; background: #42613f; color: #f4f6f1; }
+:root[data-tema="oscuro"] .primary-button:hover { background: #52764d; }
+:root[data-tema="oscuro"] .boton-tabla { border-color: #3a493c; color: #c0d7b5; }
+:root[data-tema="oscuro"] .boton-tabla:hover { background: #2b392c; }
+:root[data-tema="oscuro"] .metric-icon.icon-leaf { background: #293a2c; color: #b5d0a6; }
+:root[data-tema="oscuro"] .metric-icon.icon-clay { background: #3b3028; color: #e0b497; }
+:root[data-tema="oscuro"] .metric-icon.icon-sky { background: #2b383a; color: #b6d0d2; }
+:root[data-tema="oscuro"] .metric-icon.icon-sun { background: #393628; color: #ddd09c; }
+:root[data-tema="oscuro"] .sello-dian { background: #293a2c; color: #c5ddb8; }
+:root[data-tema="oscuro"] .folio-venta { border-color: #354139; background: #202821; color: #e5ebe4; }
+:root[data-tema="oscuro"] .stock-quantity strong,
+:root[data-tema="oscuro"] .stock-critico,
+:root[data-tema="oscuro"] .importe-negativo { color: #e0a58b !important; }
+:root[data-tema="oscuro"] .boton-tema { border-color: #3a493c; background: #263129; color: #e0d19b; }
+:root[data-tema="oscuro"] .boton-tema:hover { background: #334136; }
+
+/* CONTROL DE TEMA: el icono comunica la acción disponible */
+.boton-tema { display: grid; width: 32px; height: 32px; flex: 0 0 auto; place-items: center; border: 1px solid #e6eae3; border-radius: 5px; background: #fff; color: #657363; cursor: pointer; }
+.boton-tema:hover { background: #f1f4ed; }
+.boton-tema svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
+.boton-tema .icono-luna { display: none; }
+:root[data-tema="oscuro"] .boton-tema .icono-sol { display: none; }
+:root[data-tema="oscuro"] .boton-tema .icono-luna { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body * { transition-duration: 0.01ms !important; }
+}

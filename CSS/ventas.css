@@ -1,0 +1,8 @@
+/* VENTAS: estados comerciales y totales */
+.modulo-ventas .indicador-modulo:first-child strong { color: #55734d; }
+.modulo-ventas .indicador-modulo:last-child strong { color: #ad7658; }
+.modulo-ventas .tabla-modulo td:first-child strong { color: #55734d; font-weight: 700; }
+.modulo-ventas .tabla-modulo td:nth-child(5) { color: #465248; font-weight: 600; }
+@media (max-width: 700px) {
+  .modulo-ventas .encabezado-modulo { align-items: flex-start; }
+}
